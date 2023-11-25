@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/final new game music.mp3-773dad0fef62aedbd35ecc1b1985de27.mp3str"
+
+[deps]
+
+source_file="res://final new game music.mp3"
+dest_files=[ "res://.import/final new game music.mp3-773dad0fef62aedbd35ecc1b1985de27.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

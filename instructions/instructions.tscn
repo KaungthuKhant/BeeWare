@@ -1,0 +1,93 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://instructions/instructions.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 19
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0627451, 0.0627451, 0.0627451, 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 18.0
+margin_top = 30.0
+margin_right = 1278.0
+margin_bottom = 576.0
+custom_fonts/font = SubResource( 1 )
+text = "Welcome! How to play Bee-Ware
+
+Start: 
+The game has begun when you see the character on a dark map with a light circle around 
+them. When you see this screen, it is time to go.
+
+Moving the character:
+Move the character with the arrow keys.
+
+Game objective:
+Move the character to each building with a puzzle piece in order to collect every piece, 
+which is the only way to defeat the monster.
+
+Buildings with puzzle pieces:
+The buildings with puzzle pieces are randomly selected each game, and they are listed in 
+the upper right corner of the game. Move the character to these buildings. When you touch 
+the building containing a puzzle piece, the puzzle counter (also in the upperright corner 
+of the game) will increase by one. Once you have collected the puzzle piece for that 
+building, a star will go next to the name, indicating you are finished at that building, 
+and it is time to move on the the next one on the map. The player speed will slowly 
+decrease during the game, but each puzzle piece collected will give you a boost.
+
+Losing the game:
+You lose the game if the monster catches you. There is a warning message and an eerie 
+monster screech to notify you when the monster is near; however, if you are low on energy 
+and not near puzzle pieces, you will not be able to outrun the monster, and you will need 
+to try again."
+
+[node name="Button" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -24.0
+margin_top = -35.0
+margin_right = 24.0
+margin_bottom = -15.0
+custom_colors/font_color = Color( 0.713726, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 0.262745, 0.262745, 0.262745, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/focus = SubResource( 5 )
+custom_styles/disabled = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+text = "Back"
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

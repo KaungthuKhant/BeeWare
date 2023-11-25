@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bkst72sv75001"
+path="res://.godot/imported/background heartbeat random.mp3-de72c6a98313bcb832849e2d7125e482.mp3str"
+
+[deps]
+
+source_file="res://Scene/background heartbeat random.mp3"
+dest_files=["res://.godot/imported/background heartbeat random.mp3-de72c6a98313bcb832849e2d7125e482.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
